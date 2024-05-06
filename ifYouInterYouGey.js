@@ -88,6 +88,7 @@ function isValidMove(board, position, direction, playerPiece) {
     const rowIndex = Math.floor((position - 1) / 2) * 2; // Get the index of the row containing the piece to be moved
     const pieceIndex = (position - 1) % 2 * 2 + (direction === "left" ? 0 : 1); // Get the index of the piece in the row
     const piece = rows[rowIndex].charAt(pieceIndex);
+
     if (playerPiece === "🔴") {
         if (piece === "🔴") {
             // Check if the move is valid for red player
